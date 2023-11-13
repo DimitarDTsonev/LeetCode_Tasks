@@ -2,7 +2,6 @@
 #include<string>
 #include<vector>
 
-
 // Beats 96% for time and 60% for memory:
 int prefixCount(std::vector<std::string>& words, std::string pref) {
 	unsigned counter = 0, sizePref = pref.size();
