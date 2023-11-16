@@ -6,16 +6,16 @@
 
 std::string findDifferentBinaryString(std::vector<std::string>& nums) {
     const int sizeOfBinaryNum = nums[0].size();
-    std::string toReturn;  // Initialize with '0'
+    std::string toReturn;
 
     std::vector<int> toDecimal;
     for (size_t i = 0; i < nums.size(); i++) {
-        toDecimal.push_back(std::stoi(nums[i], 0, 2));  // Use nums[i] instead of nums[0]
+        toDecimal.push_back(std::stoi(nums[i], 0, 2));
     }
 
     int maxDecimal = 0;
     for (size_t i = 0; i < toDecimal.size(); i++) {
-        maxDecimal = std::max(maxDecimal, toDecimal[i]);  // Fix the maxDecimal calculation
+        maxDecimal = std::max(maxDecimal, toDecimal[i]);
     }
 
     int decResult = 0;
