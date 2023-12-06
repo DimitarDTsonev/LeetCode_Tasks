@@ -61,5 +61,7 @@ int main() {
     delete l1;
     delete l2;
     delete l3;
+    l1 = l2 = l3 = nullptr;
+    
     return 0;
 }
