@@ -1,7 +1,6 @@
 // Task: https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/
 
 #include<iostream>
-#include<stack>
 
 struct TreeNode {
 	int val;
@@ -73,5 +72,18 @@ int main() {
 	TreeNode* returned3 = getTargetCopy(root5, root6, root5->right->right->right);
 	std::cout << returned3->val << std::endl;
 
+	deleteBinaryTree(root1);
+	root1 = nullptr;
+	deleteBinaryTree(root2);
+	root2 = nullptr;
+	deleteBinaryTree(root3);
+	root3 = nullptr;
+	deleteBinaryTree(root4);
+	root4 = nullptr;
+	deleteBinaryTree(root5);
+	root5 = nullptr;
+	deleteBinaryTree(root6);
+	root6 = nullptr;
+	
 	return 0;
 }
