@@ -1,3 +1,5 @@
+// Task: https://leetcode.com/problems/palindrome-number/description/
+
 #include<iostream>
 
 bool isPalindrome(int x) {
