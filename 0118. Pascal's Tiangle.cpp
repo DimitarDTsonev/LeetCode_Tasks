@@ -1,4 +1,4 @@
-// Task: 
+// Task: https://leetcode.com/problems/pascals-triangle/description/ 
 #include<iostream>
 #include<vector>
 
