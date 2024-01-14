@@ -76,5 +76,12 @@ int main() {
 	printTree(root3);
 	std::cout << std::endl;
 
+	deleteBinaryTree(root1);
+	root1 = nullptr;
+	deleteBinaryTree(root2);
+	root2 = nullptr;
+	deleteBinaryTree(root3);
+	root3 = nullptr;
+	
 	return 0;
 }
