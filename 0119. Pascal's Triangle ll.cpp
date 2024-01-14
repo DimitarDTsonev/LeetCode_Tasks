@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/pascals-triangle-ii/description/
 #include<iostream>
 #include<vector>
 
