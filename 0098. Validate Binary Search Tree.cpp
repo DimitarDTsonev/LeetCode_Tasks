@@ -51,6 +51,7 @@ int main() {
 	TreeNode* root2 = new TreeNode(5, new TreeNode(1), new TreeNode(4, new TreeNode(3), 
 		new TreeNode(6)));
 	std::cout << isValidBST(root2) << std::endl;
+	
 	deleteTree(root1);
 	root1 = nullptr;
 	deleteTree(root2);
