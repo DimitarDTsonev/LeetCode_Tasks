@@ -52,9 +52,9 @@ int main() {
 		new TreeNode(6)));
 	std::cout << isValidBST(root2) << std::endl;
 	deleteTree(root1);
-root1 = nullptr;
-deleteTree(root2);
-root2 = nullptr;
+	root1 = nullptr;
+	deleteTree(root2);
+	root2 = nullptr;
 	
 	return 0;
 }
