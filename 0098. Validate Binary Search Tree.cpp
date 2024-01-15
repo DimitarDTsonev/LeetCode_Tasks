@@ -42,3 +42,15 @@ bool isValidBST(TreeNode* root) {
 	return validate(root, LONG_MIN, LONG_MAX);
 }
 
+int main() {
+	// Example 1:
+	TreeNode* root1 = new TreeNode(2, new TreeNode(1), new TreeNode(3));
+	std::cout << isValidBST(root1) << std::endl;
+	
+	// Example 2:
+	TreeNode* root2 = new TreeNode(5, new TreeNode(1), new TreeNode(4, new TreeNode(3), 
+		new TreeNode(6)));
+	std::cout << isValidBST(root2) << std::endl;
+
+	return 0;
+}
