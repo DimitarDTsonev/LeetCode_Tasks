@@ -1,7 +1,6 @@
 // Task: https://leetcode.com/problems/validate-binary-search-tree/description/
 
 #include<iostream>
-#include<vector>
 
 struct TreeNode {
 	int val;
