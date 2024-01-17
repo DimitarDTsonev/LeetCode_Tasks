@@ -1,4 +1,5 @@
-// Task:
+// Task: https://leetcode.com/problems/reverse-linked-list/
+
 #include<iostream>
 #include<stack>
 
