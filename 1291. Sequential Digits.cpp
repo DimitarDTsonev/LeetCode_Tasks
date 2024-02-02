@@ -1,4 +1,6 @@
 // Task: https://leetcode.com/problems/sequential-digits/description/?envType=daily-question&envId=2024-02-02
+#include<iostream>
+#include<vector>
 
 std::vector<int> sequentialDigits(int low, int high) {
 	std::vector<int> vec;
