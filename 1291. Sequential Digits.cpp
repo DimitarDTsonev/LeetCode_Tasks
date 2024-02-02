@@ -4,7 +4,6 @@
 #include<iostream>
 #include<vector>
 
-
 std::vector<int> sequentialDigits(int low, int high) {
 	std::vector<int> vec;
 	
