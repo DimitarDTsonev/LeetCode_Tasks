@@ -25,6 +25,7 @@ int main() {
     
     // Example 2:
     std::cout << reverse(-123) << std::endl;
+	
     // Example 3:
     std::cout << reverse(120) << std::endl;
 
