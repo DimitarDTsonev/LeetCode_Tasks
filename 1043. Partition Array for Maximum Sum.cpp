@@ -16,10 +16,8 @@ int maxSumAfterPartitioning(std::vector<int>& arr, int k) {
 		}
 		vec[i] = max;
 	}
-	
 	return vec[n];
 }
-
 
 int main() {
 	// Example 1:
@@ -36,4 +34,3 @@ int main() {
 
 	return 0;
 }
-
