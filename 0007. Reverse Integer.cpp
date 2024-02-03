@@ -11,7 +11,8 @@ int reverse(int x) {
         xCopy /= 10;
     }
 
-    if ((res > 2147483647 && x >= 0) || (res <= -2147483648 && 0 > x)) {
+    if ((res > 2147483647 && x >= 0) 
+	|| (res <= -2147483648 && 0 > x)) {
         return 0;
     }
 
@@ -27,8 +28,8 @@ int main() {
     // Example 3:
     std::cout << reverse(120) << std::endl;
 
-	// Example 4:
-	std::cout << reverse(-1534236469) << std::endl;
+    // Example 4:
+    std::cout << reverse(-1534236469) << std::endl;
 
-	return 0;
+    return 0;
 }
