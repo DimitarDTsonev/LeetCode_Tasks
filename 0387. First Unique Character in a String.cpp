@@ -37,6 +37,8 @@ int firstUniqChar(std::string s) {
 /*
 // Cool and faster solution than mine:
 
+#include<vector>
+
 int firstUniqChar(std::string s) {
 	int n = s.size();
 	std::vector<int> arr(26, 0);
@@ -53,7 +55,7 @@ int firstUniqChar(std::string s) {
 			break;
 		}
 	}
-
+ 
 	return ans;
 }
 */
