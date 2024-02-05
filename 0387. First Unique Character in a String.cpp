@@ -5,6 +5,7 @@
 #include<unordered_map>
 
 int firstUniqChar(std::string s) {
+	// Base case:
 	if (s.empty()) {
 		return -1;
 	}
@@ -24,9 +25,9 @@ int firstUniqChar(std::string s) {
 
 	int min = INT_MAX;
 
-	for (const auto& i : map) {
-		if (i.second.second == 1 && i.second.first < min) {
-			min = i.second.first;
+	for (const auto& iter : map) {
+		if (iter.second.second == 1 && iter.second.first < min) {
+			min = iter.second.first;
 		}
 	}
 
