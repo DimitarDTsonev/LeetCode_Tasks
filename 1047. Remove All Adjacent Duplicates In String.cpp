@@ -1,4 +1,4 @@
-// Task:
+// Task: https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/
 
 #include<iostream>
 #include<string>
