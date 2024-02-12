@@ -31,3 +31,18 @@ int majorityElement(vector<int>& nums) {
 
     return toReturn;
 }
+
+// O(n) time, O(1) space:
+
+
+int main() {
+    // Example 1:
+    std::vector<int> vec1 = { 3, 2, 3 };
+    std::cout << majorityElement(vec1) << "\n";
+
+    // Example 2:
+    std::vector<int> vec2 = { 2, 2, 1, 1, 1, 2, 2 };
+    std::cout << majorityElement(vec2) << "\n";
+    
+    return 0;
+}
