@@ -5,7 +5,7 @@
 #include<vector>
 #include<unordered_map>
 
-int majorityElement(vector<int>& nums) {
+int majorityElement(std::vector<int>& nums) {
     std::unordered_map<int, int> map;
 
     for (int num : nums) {
@@ -34,6 +34,25 @@ int majorityElement(vector<int>& nums) {
 
 // O(n) time, O(1) space:
 
+int majorityElement(vector<int>& nums) {
+    int n=nums.size();
+    int count=0;
+    int num=0;
+    for(int i=0;i<n;i++){
+        if (count==0){
+            num=nums[i];
+            count++;
+        }
+        else if(num==nums[i]){
+            count++;
+        }
+        else{
+            count--;
+        }
+    }
+    
+    return num; 
+}
 
 int main() {
     // Example 1:
