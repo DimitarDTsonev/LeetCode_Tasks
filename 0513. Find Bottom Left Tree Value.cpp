@@ -22,7 +22,7 @@ int findBottomLeftValue(TreeNode* root) {
 	int front = INT_MIN;
 
 	while (!q.empty()) {
-		int levelSize = q.size(); // Number of nodes at the current level
+		int levelSize = q.size();
 		for (int i = 0; i < levelSize; ++i) {
 			TreeNode* node = q.front();
 			q.pop();
@@ -56,9 +56,9 @@ int main() {
 	std::cout << findBottomLeftValue(t2) << "\n";
 
 	deleteTree(t1);
-    t1 = nullptr;
+    	t1 = nullptr;
 	deleteTree(t2);
-    t2 = nullptr;
+    	t2 = nullptr;
     
 	return 0;
 }
