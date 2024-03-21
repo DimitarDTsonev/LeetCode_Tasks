@@ -1,7 +1,6 @@
 // Task: https://leetcode.com/problems/reverse-linked-list/
 
 #include<iostream>
-#include<stack>
 
 struct ListNode {
 	int val;
@@ -49,7 +48,7 @@ int main() {
 	printLL(l1);
 	printLL(reverseList(l1));
 
-    deleteLL(l1);
+    	deleteLL(l1);
     
 	return 0;
 }
