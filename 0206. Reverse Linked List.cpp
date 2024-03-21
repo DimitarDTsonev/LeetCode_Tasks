@@ -12,30 +12,17 @@ struct ListNode {
 };
 
 ListNode* reverseList(ListNode* head) {
-	if (head == nullptr || head->next == nullptr) {
-		return head;
-	}
-	std::stack<int> st;
-	ListNode* reversed = new ListNode(), * holder = reversed;
-	while (head) {
-		st.push(head->val);
-		head = head->next;
-	}
+	ListNode* next = nullptr;
+	ListNode* prev = nullptr;;
 
-	while (st.size() != 0) {
-		if (st.size() != 1) {
-			reversed->val = st.top();
-			reversed->next = new ListNode();
-			reversed = reversed->next;
-			st.pop();
-		}
-		else {
-			break;
-		}
-	}
-	reversed->val = st.top();
-
-	return holder;
+    while(head){
+    	next = head->next;
+        head->next = prev; 
+        prev = head;
+        head = next;
+    }
+    
+	return prev;	
 }
 
 void printLL(ListNode* head) {
@@ -47,13 +34,22 @@ void printLL(ListNode* head) {
 	std::cout << std::endl;
 }
 
+void deleteLL(ListNode* head) {
+	ListNode* toDelete = nullptr;
+	while(head){
+		toDelete = head;
+		head = head->next;
+		delete toDelete;
+	}
+	head = nullptr;
+}
+
 int main() {
 	ListNode* l1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5, nullptr)))));
 	printLL(l1);
 	printLL(reverseList(l1));
 
-    delete l1;
-    l1 = nullptr;
+    deleteLL(l1);
     
 	return 0;
 }
