@@ -36,6 +36,10 @@ int main() {
     // Example 2:
     TreeNode* t2 = new TreeNode(1, new TreeNode(2, new TreeNode(3, new TreeNode(4), new TreeNode(4)), new TreeNode(3)), new TreeNode(2));
     std::cout << isBalanced(t2) << '\n';
+
+    // Example 3:
+    TreeNode* t2 = nullptr;
+    std::cout << isBalanced(t3) << '\n';
     
     return 0;
 }
