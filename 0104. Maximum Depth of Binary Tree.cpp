@@ -19,6 +19,12 @@ int maxDepth(TreeNode* root) {
 
 int main() { 
     // Example 1:
+    TreeNode* t1 = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7));
+    std::cout << maxDepth(t1) << '\n';
+
+    // Example 2:
+    TreeNode* t2 = new TreeNode(1, nullptr, new TreeNode(2));
+    std::cout << maxDepth(t2) << '\n';
     
     return 0;
 }
