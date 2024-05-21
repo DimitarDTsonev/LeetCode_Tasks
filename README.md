@@ -18,5 +18,6 @@ The main data types in the problems are:
 12. Hash Functions and Hash Tables
 13. Heap(Min & Max)
 14. Sorting Algorithms
+15. Sets
 
 # My Profile --> https://leetcode.com/DimitarTsonev/
