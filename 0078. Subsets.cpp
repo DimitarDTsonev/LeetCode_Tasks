@@ -3,24 +3,22 @@
 #include <iostream>
 #include <vector>
 
-std::vector <std::vector<int >> subsets(std::vector<int>& nums) {
-	int size = nums.size();
-	int totalSize = pow(2, size);
-	std::vector<std::vector<int>> res;
-	
-	for (int i = 0; i < totalSize; i++) {
-		std::vector<int> toAdd;
-
-		for (int j = 0; j < size; j++) {
-			if (i & (1 << j)) {
-				toAdd.push_back(nums[j]);
-			}
-		}
-		res.push_back(toAdd);
-	}
-	return res;
+std::vector<std::vector<int>> subsets(std::vector<int>& nums) {
+    int size = nums.size();
+    int totalSize = 1 << size;
+    std::vector<std::vector<int>> res;
+    
+    for (int i = 0; i < totalSize; ++i) {
+        std::vector<int> subset;
+        for (int j = 0; j < size; ++j) {
+            if (i & (1 << j)) {
+                subset.push_back(nums[j]);
+            }
+        }
+        res.push_back(subset);
+    }
+    return res;
 }
-
 void printMatrix(std::vector<std::vector<int>> mat) {
 	for (size_t i = 0; i < mat.size(); i++) {
 		std::cout << "{ ";
