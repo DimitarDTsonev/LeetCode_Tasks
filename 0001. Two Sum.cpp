@@ -2,24 +2,26 @@
 
 #include<iostream>
 #include<vector>
+#include<unordered_map>
 
-std::vector<int> twoSum(std::vector<int>& nums, int target) {
-    std::vector<int> result;
 
-	for (size_t i = 0; i < nums.size(); i++) {
-		for (size_t j = i + 1; j < nums.size(); j++) {
-			if (nums[i] + nums[j] == target) {
-				result.push_back(i);
-				result.push_back(j);
-				return result;
-            }
-		}
-	}
-	return result;
+std::vector<int> twoSum(std::vector<int>& nums,int target){
+    const size_t size = nums.size();
+    std::unordered_map<int, int> map;
+    
+    for(int i = 0;i<size;i++){
+        if(map.find(target - nums[i])!=map.end()){
+            return std::vector<int>{map[target - nums[i]],i};
+        }
+        map[nums[i]] = i;
+    }
+    return {};
 }
 
+
 void printVec(std::vector<int>& vec){
-    for (size_t i = 0; i < vec.size(); i++){
+    const size_t size = vec.size();	
+    for (size_t i = 0; i < size; i++){
         std::cout << vec[i] << " ";
     }
     std::cout << std::endl;
