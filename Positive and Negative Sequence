@@ -1,0 +1,71 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+
+bool sameSequence(std::vector<int>& vec)
+{
+	if (vec.size() % 2 != 0)
+	{
+		return false;
+	}
+	std::queue<int> pos;
+	std::queue<int> neg;
+
+	for (size_t i = 0; i < vec.size(); i++)
+	{
+		if (vec[i] > 0)
+		{
+			if (pos.empty() && neg.empty())
+			{
+				pos.push(vec[i]);
+			}
+			else if (pos.empty() && !neg.empty())
+			{
+				if (vec[i] == std::abs(neg.front()))
+				{
+					neg.pop();
+				}
+				else
+				{
+					return false;
+				}
+			}
+			else if (!pos.empty())
+			{
+				pos.push(vec[i]);
+			}
+		}
+		else
+		{
+			if (pos.empty() && neg.empty())
+			{
+				neg.push(vec[i]);
+			}
+			else if (!pos.empty() && neg.empty())
+			{
+				if (std::abs(vec[i]) == pos.front())
+				{
+					pos.pop();
+				}
+				else
+				{
+					return false;
+				}
+			}
+			else if (!neg.empty())
+			{
+				neg.push(vec[i]);
+			}
+		}
+	}
+
+	return true;
+}
+
+int main()
+{
+	std::vector<int> vec = { 1, 5, -1, 4, -5, 9, 8, -4, -9, 18, -8, -18, -7, 7 };
+	std::cout << sameSequence(vec);
+
+	return 0;
+}
