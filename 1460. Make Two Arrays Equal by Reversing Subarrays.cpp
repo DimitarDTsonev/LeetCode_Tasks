@@ -18,6 +18,12 @@ bool canBeEqual(std::vector<int>& target, std::vector<int>& arr) {
     return vec1 == vec2;
 }
 
+bool canBeEqual1(std::vector<int>& target, std::vector<int>& arr) {
+    std::sort(target.begin(), target.end());
+    std::sort(arr.begin(), arr.end());
+    return target == arr;
+}
+
 int main() {
     //Example 1: 
     std::vector<int> vec1 = { 1, 2, 3, 4 };
