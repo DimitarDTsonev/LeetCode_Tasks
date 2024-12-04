@@ -4,20 +4,19 @@
 #include<vector>
 #include<unordered_map>
 
-
 std::vector<int> twoSum(std::vector<int>& nums,int target){
     const size_t size = nums.size();
     std::unordered_map<int, int> map;
     
-    for(int i = 0;i<size;i++){
-        if(map.find(target - nums[i])!=map.end()){
-            return std::vector<int>{map[target - nums[i]],i};
+    for (int i = 0; i < size; i++){
+        if (map.find(target - nums[i]) != map.end()){
+            return std::vector<int>{ map[target - nums[i]], i };
         }
         map[nums[i]] = i;
     }
+    
     return {};
 }
-
 
 void printVec(std::vector<int>& vec){
     const size_t size = vec.size();	
