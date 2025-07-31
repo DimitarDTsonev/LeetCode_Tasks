@@ -73,3 +73,39 @@ ListNode* mergeKLists(std::vector<ListNode*>& lists) {
 
     return lists[0];
 }
+
+void printList(ListNode* head) {
+    ListNode* iter = head;
+    while (iter) {
+        std::cout << iter->val << " ";
+        iter = iter->next;
+    }
+    std::cout << '\n';
+}
+
+int main() {
+    // Example 1:
+    ListNode* list1 = new ListNode(1, new ListNode(4, new ListNode(5)));
+    ListNode* list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+    ListNode* list3 = new ListNode(2, new ListNode(6)));
+    std::vector<ListNode*> vec1;
+    vec1.push_back(list1);
+    vec1.push_back(list2);
+    vec1.push_back(list3);
+    ListNode* res1 = mergeKLists(vec1);
+    printList(res1);
+
+    // Example 2:
+    std::vector<ListNode*> vec2;
+    ListNode* res2 = mergeKLists(vec2);
+    printList(res2);
+    
+    // Example 3:
+    ListNode* list4 = new ListNode();
+    std::vector<ListNode*> vec3;
+    vec2.push_back(list4);
+    ListNode* res3 = mergeKLists(vec2);
+    printList(res3);
+    
+    return 0;
+}
