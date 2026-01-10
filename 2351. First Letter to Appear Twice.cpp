@@ -7,7 +7,7 @@
 char repeatedCharacter(std::string s) {
 	std::unordered_map<char, int> seen;
 
-	for (char ch : s) {
+	for (const char ch : s) {
 		if (seen.find(ch) != seen.end()) {
 			return ch;
 		}
